@@ -18,11 +18,11 @@ const sounds = Object.entries(audioFiles).map(([path, module]) => ({
  */
 function WaveBars({ active }) {
   return (
-    <div className="flex items-end gap-[3px] h-5">
+    <div className="flex items-end gap-0.75 h-5">
       {[0.5, 0.9, 0.6, 1, 0.7, 0.85, 0.4].map((h, i) => (
         <div
           key={i}
-          className={`w-[3px] rounded-full transition-all duration-300 ${active ? "bg-white" : "bg-white/20"}`}
+          className={`w-0.75 rounded-full transition-all duration-300 ${active ? "bg-white" : "bg-white/20"}`}
           style={{
             height: active ? `${h * 100}%` : "30%",
             animation: active
@@ -167,7 +167,7 @@ function SoundCard({ sound, isActive, onPlay }) {
       </div>
 
       <div
-        className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-[2px] rounded-full bg-indigo-300 transition-all duration-300 ${
+        className={`absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 rounded-full bg-indigo-300 transition-all duration-300 ${
           isActive ? "w-1/2 opacity-100" : "w-0 opacity-0"
         }`}
       />
